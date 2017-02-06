@@ -1,6 +1,84 @@
 {
-    "quotes": [
-        {"text": "I sat close to the microwave as a kid. Sometimes I got headaches.", "author":"johnthewayne"},
-        {"text":"Llammada", "author":"johnthewayne"}
-    ]
+  "quotes": [
+    {
+      "text": "I sat close to the microwave as a kid. Sometimes I got headaches.",
+      "author": "johnthewayne",
+      "id": 1
+    },
+    {
+      "text": "Llammbda",
+      "author": "johnthewayne",
+      "id": 2
+    },
+    {
+      "text": "Oh my god! I’m huge!",
+      "author": "johnwayne",
+      "id": 3
+    },
+    {
+      "text": "I like to mount my controllers.",
+      "author": "crit",
+      "id":4
+    },
+    {
+      "text": "I don’t think I have the ability to pass out.",
+      "author": "johnwayne",
+      "id": 5
+    },
+    {
+      "text": "you know you’re an alcoholic when you see the word run and think rum",
+      "author": "polds",
+      "id": 6
+    },
+    {
+      "text": "Fingers can get messy while coding",
+      "author": "johnwayne",
+      "id":7
+    },
+    {
+      "text": "It’s hard for me to pick a single topic and focus on it :/",
+      "author": "polds",
+      "id": 8
+    },
+    {
+      "text": "I mean, what else would you use a network cable for?",
+      "author": "polds",
+      "id" :9
+    },
+    {
+      "text": "if your name is lunch, then I'll do lunch.",
+      "author": "polds",
+      "id": 10
+    },
+    {
+      "text": "Am I really penetrating everyone’s minds that much?",
+      "author": "johnwayne",
+      "id":11
+    },
+    {
+      "text": "I don't see football leading us to a Utopian age where we see other star systems.",
+      "author": "polds",
+      "id": 12
+    },
+    {
+      "text": "hey do you know if we need to file state AND federal tax?",
+      "author": "brussum",
+      "id": 13
+    },
+    {
+      "text": "geeze this conversation is getting much more than I wanted lol",
+      "author": "brussum",
+      "id": 14
+    },
+    {
+      "text": "it's going as fast as a pregnant turtle",
+      "author": "brussum",
+      "id" : 15
+    },
+    {
+      "text": "♫ cuz I be mergin’ ♫",
+      "author": "brussum",
+      "id": 16
+    }
+  ]
 }
