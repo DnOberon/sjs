@@ -37,6 +37,7 @@ type ResponseMessage struct {
 type Quote struct {
 	Text   string `json:"text"`
 	Author string `json:"author"`
+	ID     int    `json:"id"`
 }
 
 // QuoteFile structure yay
@@ -99,7 +100,7 @@ func main() {
 		}
 
 		// add and upload new quote
-		quotes.Quotes = append(quotes.Quotes, Quote{Text: event.Text, Author: event.UserName})
+		quotes.Quotes = append(quotes.Quotes, Quote{Text: event.Text, Author: event.UserName, ID: len(quotes.Quotes) + 1})
 
 		newQuotes, err := json.Marshal(quotes)
 		if err != nil {
