@@ -4,6 +4,7 @@ import (
 	"encoding/json"
 
 	"bytes"
+	"fmt"
 	"github.com/apex/go-apex"
 	"github.com/aws/aws-sdk-go/aws"
 	"github.com/aws/aws-sdk-go/aws/session"
@@ -100,7 +101,8 @@ func main() {
 		}
 
 		// add and upload new quote
-		quotes.Quotes = append(quotes.Quotes, Quote{Text: event.Text, Author: event.UserName, ID: len(quotes.Quotes) + 1})
+		id := len(quotes.Quotes) + 1
+		quotes.Quotes = append(quotes.Quotes, Quote{Text: event.Text, Author: event.UserName, ID: id})
 
 		newQuotes, err := json.Marshal(quotes)
 		if err != nil {
@@ -120,6 +122,7 @@ func main() {
 			return ResponseMessage{Text: "Unable to add quote"}, err
 		}
 
-		return ResponseMessage{Text: "Quote added successfully! Visit: http://shitjasonsays.com", ResponseType: "ephemeral"}, err
+		return ResponseMessage{Text: fmt.Sprintf("Quote added successfully! Visit: http://shitjasonsays.com/#/%d", id),
+			ResponseType: "ephemeral"}, err
 	})
 }
