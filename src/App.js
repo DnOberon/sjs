@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
 import { hashHistory } from 'react-router';
 
-import './App.css';
 import 'whatwg-fetch';
 import 'bulma';
 import gopher from './jasongopher.png';
 
 // accepts an array of quote objects and a single quote object
-// TODO you're better than this, fix it!
 function seenQuoteCheck(array, value) {
     let check = array.filter((n) => n.text === value.text)
 
@@ -18,7 +16,7 @@ function seenQuoteCheck(array, value) {
 }
 
 // takes a string and cuts it down to 100 characters
-// w.out overflowing =P
+// are we really using + to concat strings? yes, yes we are
 function tweet(value) {
     if (value.length < 100){
         return "https://twitter.com/intent/tweet?text="+encodeURIComponent(value)+"&url=http%3A%2F%2Fshitjasonsays.com%2F%23%2F"
@@ -119,17 +117,18 @@ class App extends Component {
                         <div className="column is-offset-1 is-12-mobile ">
                             <h1 className="title">
                                 {this.state.selectedQuote.text}
-                                <a className="button is-primary" href={" " + this.state.tweet + this.state.selectedQuote.id} target="_blank">
-                                    <span className="icon">
-                                        <i className="fa fa-twitter"></i>
-                                    </span>
-                                </a>
                             </h1>
                             <h2 className="subtitle">
                                 added by @{this.state.selectedQuote.author}
                             </h2>
                             <div>
                                 <a className="button  is-primary is-inverted is-outlined "  onClick={this.changeQuote}>More shit</a>
+                                <a className="button is-primary" href={" " + this.state.tweet + this.state.selectedQuote.id} target="_blank">
+                                    <span className="icon">
+                                        <i className="fa fa-twitter"></i>
+                                    </span>
+                                    <span>Twitter</span>
+                                </a>
                             </div>
                         </div>
                         <div className="column ">
@@ -139,6 +138,20 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
+
+                <footer className="footer" style={{background: "#00d1b2"}}>
+                    <div className="container">
+                        <div className="content" style={{color: "white"}}>
+                            <p>
+                                <a className="icon" href="https://github.com/DnOberon/sjs">
+                                    <i className="fa fa-github"></i>
+                                </a>
+                                <strong><a href="https://github.com/DnOberon/sjs">Shit Jason Says</a></strong> by John D.
+
+                            </p>
+                        </div>
+                    </div>
+                </footer>
             </section>
         );
     }
