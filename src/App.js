@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { hashHistory } from 'react-router';
 
-import './App.css';
 import 'whatwg-fetch';
 import 'bulma';
 import gopher from './jasongopher.png';
