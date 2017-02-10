@@ -7,7 +7,6 @@ import 'bulma';
 import gopher from './jasongopher.png';
 
 // accepts an array of quote objects and a single quote object
-// TODO you're better than this, fix it!
 function seenQuoteCheck(array, value) {
     let check = array.filter((n) => n.text === value.text)
 
@@ -18,7 +17,7 @@ function seenQuoteCheck(array, value) {
 }
 
 // takes a string and cuts it down to 100 characters
-// w.out overflowing =P
+// are we really using + to concat strings? yes, yes we are
 function tweet(value) {
     if (value.length < 100){
         return "https://twitter.com/intent/tweet?text="+encodeURIComponent(value)+"&url=http%3A%2F%2Fshitjasonsays.com%2F%23%2F"
