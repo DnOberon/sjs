@@ -119,17 +119,18 @@ class App extends Component {
                         <div className="column is-offset-1 is-12-mobile ">
                             <h1 className="title">
                                 {this.state.selectedQuote.text}
-                                <a className="button is-primary" href={" " + this.state.tweet + this.state.selectedQuote.id} target="_blank">
-                                    <span className="icon">
-                                        <i className="fa fa-twitter"></i>
-                                    </span>
-                                </a>
                             </h1>
                             <h2 className="subtitle">
                                 added by @{this.state.selectedQuote.author}
                             </h2>
                             <div>
                                 <a className="button  is-primary is-inverted is-outlined "  onClick={this.changeQuote}>More shit</a>
+                                <a className="button is-primary" href={" " + this.state.tweet + this.state.selectedQuote.id} target="_blank">
+                                    <span className="icon">
+                                        <i className="fa fa-twitter"></i>
+                                    </span>
+                                    <span>Twitter</span>
+                                </a>
                             </div>
                         </div>
                         <div className="column ">
@@ -139,6 +140,20 @@ class App extends Component {
                         </div>
                     </div>
                 </div>
+
+                <footer className="footer" style={{background: "#00d1b2"}}>
+                    <div className="container">
+                        <div className="content" style={{color: "white"}}>
+                            <p>
+                                <a className="icon" href="https://github.com/DnOberon/sjs">
+                                    <i className="fa fa-github"></i>
+                                </a>
+                                <strong><a href="https://github.com/DnOberon/sjs">Shit Jason Says</a></strong> by John D.
+
+                            </p>
+                        </div>
+                    </div>
+                </footer>
             </section>
         );
     }
