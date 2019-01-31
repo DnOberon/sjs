@@ -19,10 +19,10 @@ function seenQuoteCheck(array, value) {
 // are we really using + to concat strings? yes, yes we are
 function tweet(value) {
     if (value.length < 100){
-        return "https://twitter.com/intent/tweet?text="+encodeURIComponent(value)+"&url=http%3A%2F%2Fshitjasonsays.com%2F%23%2F"
+        return "https://twitter.com/intent/tweet?text="+encodeURIComponent(value)+"&url=http%3A%2F%2Fsjs.notyourlanguage.com%2F%23%2F"
     }
 
-    return "https://twitter.com/intent/tweet?text="+encodeURIComponent(value.slice(0, 100))+"&url=http%3A%2F%2Fshitjasonsays.com%2F%23%2F"
+    return "https://twitter.com/intent/tweet?text="+encodeURIComponent(value.slice(0, 100))+"&url=http%3A%2F%2Fsjs.notyourlanguage.com%2F%23%2F"
 }
 
 class App extends Component {
@@ -122,7 +122,7 @@ class App extends Component {
                                 added by @{this.state.selectedQuote.author}
                             </h2>
                             <div>
-                                <a className="button  is-primary is-inverted is-outlined "  onClick={this.changeQuote}>More shit</a>
+                                <a className="button  is-primary is-inverted is-outlined "  onClick={this.changeQuote}>More stuff</a>
                                 <a className="button is-primary" href={" " + this.state.tweet + this.state.selectedQuote.id} target="_blank">
                                     <span className="icon">
                                         <i className="fa fa-twitter"></i>
@@ -146,7 +146,7 @@ class App extends Component {
                                 <a className="icon" href="https://github.com/DnOberon/sjs">
                                     <i className="fa fa-github"></i>
                                 </a>
-                                <strong><a href="https://github.com/DnOberon/sjs">Shit Jason Says</a></strong> by John D.
+                                <strong><a href="https://github.com/DnOberon/sjs">Stuff Jason Says</a></strong> by John D.
 
                             </p>
                         </div>

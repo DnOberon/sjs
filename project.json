@@ -1,6 +1,6 @@
 {
   "name": "sjs2",
-  "description": "shit jason says v2",
+  "description": "stuff jason says v2",
   "memory": 128,
   "timeout": 5,
   "role": "arn:aws:iam::849113718245:role/sjs2_lambda_function",
